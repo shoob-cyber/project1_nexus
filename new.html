@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('bgproj.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-box {
+            width: 90%;
+            max-width: 450px;
+            background-color: rgba(240, 248, 255, 0.7);
+            backdrop-filter: blur(5px);
+            border-radius: 45px;
+            padding: 50px 60px 70px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            margin: 10px auto;
+            width: 30px;
+            height: 4px;
+            background: #fff;
+            border-radius: 2px;
+        }
+
+        .input-field {
+            background: #eaeaea;
+            margin: 15px 0;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            max-height: 65px;
+            transition: max-height 0.5s;
+            overflow: hidden;
+        }
+
+        input {
+            width: 100%;
+            background: transparent;
+            border: 0;
+            outline: 0;
+            padding: 15px;
+        }
+
+        form p {
+            text-align: left;
+            font-size: 13px;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        form p a {
+            text-decoration: none;
+            color: #4c00ff;
+            font-weight: bold;
+        }
+
+        .btn-field {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .btn-field button {
+            flex-basis: 48%;
+            background: #4c00ff;
+            color: #fff;
+            height: 40px;
+            border-radius: 20px;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+            transition: background 0.8s;
+        }
+
+        .btn-field button.disable {
+            background: #eaeaea;
+            color: #555;
+        }
+        .btn-field button:hover{
+            background: #3800b3;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #4c00ff;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    
+</body>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            
+            <h1 id="title">Sign Up</h1>
+            <form action="signup-process.php" method="post">
+
+                
+                <div class="input-group">
+                    <div class="input-field" id="namefield">
+                        <input type="text" placeholder="Name">
+                    </div>
+
+                    <div class="input-field">
+                        <input type="email" placeholder="Email">
+                    </div>
+
+                    <div class="input-field">
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <p>Forgot Password? <a href="forgotps.html" target="_blank">Click here!</a></p>    
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="signupBtn">Signup</button>
+                    <button type="button" id="signinBtn" class="disable">Sign in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let signupBtn = document.getElementById("signupBtn");
+        let signinBtn = document.getElementById("signinBtn");
+        let nameField = document.getElementById("namefield");
+        let title = document.getElementById("title");
+
+        signupBtn.onclick = function () {
+            nameField.style.maxHeight = "65px";
+            title.innerHTML = "Sign up";
+            signupBtn.classList.remove("disable");
+            signinBtn.classList.add("disable");
+        }
+
+        signinBtn.onclick = function () {
+            nameField.style.maxHeight = "0";
+            title.innerHTML = "Sign in";
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+        }
+        clickhere.onclick = function(){
+
+        }
+
+    </script>
+</body>
+
+</html>
